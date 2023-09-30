@@ -2,6 +2,8 @@ import { Collection, Document } from "mongodb";
 import uuid from "node-uuid";
 import database, { USER_COLLECTION, ValueCollection } from "../database";
 
+
+
 export class User {
     public id: string;
     public login: string;
@@ -17,6 +19,8 @@ export class User {
         return this.password === password;
     }
 }
+
+
 
 export class UserCollection extends ValueCollection {
     constructor(collection: Collection<Document>) {
@@ -43,6 +47,8 @@ export class UserCollection extends ValueCollection {
         await super._deleteValue({ id: user.id });
     }
 }
+
+
 
 export function userCollection() {
     return new UserCollection(database.getCollection(USER_COLLECTION));
