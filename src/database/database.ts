@@ -11,7 +11,7 @@ export const COLLECTION_NAMES: string[] = [
 
 
 
-export class ValueCollection {
+export abstract class ValueCollection {
   private collection: Collection<Document>;
 
   constructor(collection: Collection<Document>) {

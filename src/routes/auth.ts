@@ -40,7 +40,7 @@ export function initRoute(app: express.Express) {
             return;
         }
 
-        if (user.password !== password) {
+        if (!user.checkPassword(password)) {
             res.send({
                 error: "Password is incorrect!",
             });
