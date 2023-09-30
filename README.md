@@ -9,7 +9,7 @@ npm i express-fileupload
 
 ## Test
 
-** Signup
+* Signup
 ```http
 POST /signup HTTP/1.1
 Host: localhost:8000
@@ -20,7 +20,7 @@ Content: {
 }
 ```
 
-** Login
+* Login
 ```http
 POST /login HTTP/1.1
 Host: localhost:8000
@@ -31,13 +31,13 @@ Content: {
 }
 ```
 
-** Logout
+* Logout
 ```http
 POST /logout HTTP/1.1
 Host: localhost:8000
 ```
 
-** Check auth
+* Check auth
 ```http
 GET /auth/check HTTP/1.1
 Host: localhost:8000
